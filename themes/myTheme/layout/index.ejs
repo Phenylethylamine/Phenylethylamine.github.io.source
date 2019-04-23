@@ -1,0 +1,34 @@
+<%
+var wrapClass = [];
+var templates = {
+    header: '',
+    content: '',
+    footer: ''
+};
+if (is_home()) {
+    templates = {
+        header: 'partial/homeHeader.ejs',
+        content: 'partial/homeContent.ejs',
+        footer: 'partial/footer.ejs'
+    };
+} else if (is_archive() || page.category || page.tag) {
+    templates = {
+        header: 'partial/archiveHeader.ejs',
+        content: 'partial/archiveContent.ejs',
+        footer: 'partial/footer.ejs'
+    };
+} else {
+    templates = {
+        header: 'partial/mdPageHeader.ejs',
+        content: 'partial/mdPageContent.ejs',
+        footer: 'partial/footer.ejs'
+    };
+}
+
+/* 모든 화면은 #wrap 안에 #header #content #footer로 나눈다 */
+%>
+<div id="wrap">
+    <%- templates.header ? partial(templates.header) : null %>
+    <%- templates.content ? partial(templates.content) : null %>
+    <%- templates.footer ? partial(templates.footer) : null %>
+</div>

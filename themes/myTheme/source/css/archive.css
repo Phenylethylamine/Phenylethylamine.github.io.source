@@ -1,0 +1,138 @@
+body.archive #categories,
+body.archive #tags {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+body.archive #categories .title,
+body.archive #tags .title {
+    display: inline-block;
+    background: #c8c8c8;
+    border: 1px solid #c8c8c8;
+    color: #54575a;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    margin-right: 0.5rem;
+    cursor: default;
+    font-weight: bold;
+}
+
+body.archive #categories ul,
+body.archive #tags ul {
+    padding: 0;
+    display: inline;
+}
+
+body.archive #categories ul li,
+body.archive #tags ul li {
+    display: inline-block;
+    margin-right: 0.5rem;
+    border-radius: 0.3rem;
+    border: 1px solid #c8c8c8;
+    margin-top: 1rem;
+}
+
+body.archive #categories ul li.selected,
+body.archive #tags ul li.selected {
+    font-weight: bold;
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+body.archive #categories ul li a,
+body.archive #tags ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+@media (min-width: 576px) {
+    body.archive #categories .title,
+    body.archive #tags .title {
+        margin-right: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    body.archive #categories ul li,
+    body.archive #tags ul li {
+        margin-right: 1rem;
+    }
+
+    body.archive #categories ul li a,
+    body.archive #tags ul li a {
+        padding: 1rem 2rem;
+    }
+}
+
+
+body.archive #posts {
+    margin-top: 2rem;
+}
+
+body.archive #posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+body.archive #posts > div.title {
+    font-size: 3rem;
+    cursor: default;
+    padding: 2rem;
+}
+
+body.archive #posts li.post {
+    border-top: 1px solid #707271;
+    padding: 2rem;
+}
+
+body.archive #posts li.post div.titleRow {
+}
+
+body.archive #posts li.post div.titleRow a.category {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.6rem;
+    background: #54575a;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+body.archive #posts li.post div.titleRow a.title {
+    vertical-align: top;
+    font-size: 2rem;
+    padding: 0 0.5rem;
+}
+
+body.archive #posts li.post div.titleRow a.title:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.archive #posts li.post div.contentRow {
+    margin-top: 2rem;
+}
+
+body.archive #posts li.post div.contentRow a.excerpt {
+    display: block;
+    font-size: 1.4rem;
+}
+
+body.archive #posts li.post div.contentRow a.excerpt:hover {
+    text-decoration: underline;
+}
+
+body.archive #posts li.post div.contentRow span.date {
+    display: block;
+    text-align: right;
+}
+
+body.archive #posts li.post ul.tags {
+
+}
+
+body.archive #posts li.post ul.tags li {
+    float: right;
+    margin-right: 1em;
+}
+
+body.archive #posts li.post ul.tags li:first-child {
+    margin-right: 0;
+}

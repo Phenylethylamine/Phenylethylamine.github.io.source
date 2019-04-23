@@ -1,0 +1,100 @@
+<div id="content" class="container">
+    <div id="categories">
+        <div class="title">카테고리</div>
+        <ul>
+            <%- (function () {
+                let htmlList = [];
+                let template = '<li><a href="{href}">{text}<span>({length})</span></a></li>';
+                site.categories.each(function (category) {
+                    htmlList.push(
+                            template.replace('{href}', url_for(category.path))
+                                    .replace('{text}', category.name)
+                                    .replace('{length}', category.length)
+                    );
+                });
+                return htmlList.join('');
+            })(); %>
+        </ul>
+    </div>
+    <div id="tags">
+        <div class="title">태그</div>
+        <ul>
+            <%- (function () {
+                let htmlList = [];
+                let template = '<li><a href="{href}">#{text}<span>({length})</span></a></li>';
+                site.tags.each(function (tag) {
+                    htmlList.push(
+                            template.replace('{href}', url_for(tag.path))
+                                    .replace('{text}', tag.name)
+                                    .replace('{length}', tag.length)
+                    );
+                });
+                return htmlList.join('');
+            })(); %>
+        </ul>
+    </div>
+    <div id="posts">
+        <div class="title">포스트</div>
+        <ul>
+            <%- (function () {
+                let htmlList = [];
+                let postTemplate = '\
+                    <li class="post">\
+                        <div class="titleRow">\
+                            {category}\
+                            <a class="title bold" href="{href}">{title}</a>\
+                        </div>\
+                        <div class="contentRow">\
+                            <a class="excerpt" href="{href}">{excerpt}</a>\
+                            <span class="date">{date}</span>\
+                        </div>\
+                        <ul class="tags clearfix">{tags}</ul>\
+                    </li>\
+                ';
+
+                let categoryTemplate = '<a class="category" href="{href}">{categoryName}</a>';
+                let tagTemplate = '<li><a href="{href}">#{tagName}</a></li>';
+                page.posts.each(function (eachPost) {
+                    let categoryLink = '';
+                    eachPost.categories.each(function (eachCategory) {
+                        categoryLink = categoryTemplate
+                                .replace('{href}', url_for(eachCategory.path))
+                                .replace('{categoryName}', eachCategory.name);
+                    });
+
+                    let tags = [];
+                    eachPost.tags.each(function (eachTag) {
+                        tags.push(
+                                tagTemplate
+                                        .replace('{href}', url_for(eachTag.path))
+                                        .replace('{tagName}', eachTag.name)
+                        )
+                    });
+
+
+                    let dateText = eachPost.date.fromNow();
+                    htmlList.push(
+                            postTemplate
+                                    .replace(/{href}/g, url_for(eachPost.path))
+                                    .replace(/{date}/g, dateText)
+                                    .replace(/{title}/g, eachPost.title)
+                                    .replace(/{category}/g, categoryLink)
+                                    .replace(/{tags}/g, tags.join(''))
+                                    .replace(/{excerpt}/g,
+                                            truncate(
+                                                    trim(
+                                                            strip_html(eachPost.content)
+                                                                    .replace(eachPost.title, '')
+                                                    ), {
+                                                        length: 250,
+                                                        omission: '...'
+                                                    }
+                                            )
+                                    )
+                    );
+                });
+                return htmlList.join('');
+            })(); %>
+        </ul>
+    </div>
+</div>

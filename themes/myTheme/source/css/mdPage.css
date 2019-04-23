@@ -1,0 +1,69 @@
+/* aside */
+body.mdPage #content {
+}
+
+@media (min-width: 768px) {
+    body.mdPage #content {
+        box-shadow: 0px 0px 1000px 0px #5b6770;
+        border-radius: 1rem;
+    }
+}
+
+body.mdPage #aside {
+    background: #2f2f2f;
+}
+
+@media (min-width: 768px) {
+    body.mdPage #aside {
+        position: relative;
+    }
+
+    body.mdPage #aside #tocSection {
+        position: relative;
+        transition-duration: 0.5s;
+    }
+}
+
+
+/* aside content */
+body.mdPage #tocSection {
+    border-bottom: 1px solid #5b6770;
+}
+
+body.mdPage #tocSection > div.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: default;
+    border-bottom: 1px solid #5b6770;
+}
+
+/* For Print */
+@media print {
+    #header {
+        display: none;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    #aside {
+        display: none;
+    }
+
+    body {
+        background: transparent;
+        color: #000;
+    }
+
+    .container {
+        max-width: none;
+    }
+
+    #document {
+        flex: 0 0 80%;
+        margin: 0 auto;
+        max-width: none;
+    }
+}

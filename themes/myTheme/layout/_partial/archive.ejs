@@ -1,0 +1,41 @@
+<div id="header" class="container-fluid">
+  <ul id="nav" class="nav">
+    <li class="nav-item">
+      <a class="nav-link<%- is_current('/profile/') ? ' active' : '' %>" href="/profile/">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Blog</a>
+    </li>
+  </ul>
+  <!-- TODO 화면 상단 가운데에 Title 노출, Post 일 경우 날자도 노출 -->
+  <div id="fileName">
+    <% if (is_post()) { %>
+      <%- page.source %>
+    <% } else { %>
+      <%- page.source.substr(0, page.source.indexOf('/')) + '.md' %>
+    <% } %>
+  </div>
+</div>
+<div id="commonContainer" class="container">
+  <div class="row">
+    <div id="aside" class="col-md-3">
+      <!-- TODO PC버전에서 따라다니게 할 예정 -->
+      <div id="tocSection">
+        <div class="title">목차</div>
+        <div class="markdownToc">
+          <%- toc(page.content, {list_number: false}) %>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="col-md-9">
+      <div class="markdown">
+        <%- page.content %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- TODO 이전글, 다음글, 연관포스트 -->
+  </div>
+</div>
+
+

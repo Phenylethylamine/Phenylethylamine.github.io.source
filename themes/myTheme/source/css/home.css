@@ -1,0 +1,30 @@
+body.home #wrap #content {
+    height: calc(100vh - 250px);
+}
+
+body.home #content .item {
+    text-align: center;
+}
+
+body.home #content .item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background: #54575a;
+    border-radius: 10px;
+    font-size: 3rem;
+    letter-spacing:-0.1rem;
+    font-weight:bold;
+    line-height: 4rem;
+}
+
+body.home #content .item a:hover {
+    background: #707271;
+}
+
+body.home #content .item a span.icon {
+    font-size: 8rem;
+    line-height: 8rem;
+}
