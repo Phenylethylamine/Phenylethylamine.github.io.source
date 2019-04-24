@@ -19,7 +19,7 @@ date: 2019-04-13 23:42:11
 
 ### Experienced Syntaxes
 
-- PHP : Legacy PHP, Modren PHP, Laravel
+- PHP : Legacy PHP(5.X), Modren PHP(7.X), Laravel
 - Java for Android
 - SQL for MySQL
 - ECMA Script 5 & jQuery
