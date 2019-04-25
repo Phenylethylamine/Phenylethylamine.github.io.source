@@ -121,7 +121,8 @@
 
 .markdown li ul,
 .markdown li ol {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
     padding-left: 1.5rem;
 }
 
@@ -161,19 +162,41 @@
     color: #fff;
 }
 
-
 .markdown blockquote {
     border: 1px solid #898c8d;
     border-left: 8px solid #898c8d;
     margin: 1.5em 10px;
     padding: 0.5em 1em;
 }
-.markdown blockquote p{
+
+.markdown blockquote p {
     text-indent: 0;
 }
 
 .markdown blockquote p:first-child {
     margin-top: 0;
+}
+
+.markdown table {
+    width: 100%;
+    margin: 5rem auto;
+}
+
+.markdown table th {
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #898c8d;
+    padding: 1rem;
+    background: rgba(255,255,255,0.1);
+}
+
+.markdown table td {
+    border: 1px solid #898c8d;
+    padding: 1rem;
+}
+
+.markdown table tr:nth-child(2n) td {
+    background: rgba(255,255,255,0.1);
 }
 
 

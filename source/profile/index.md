@@ -12,21 +12,33 @@ date: 2019-04-13 23:42:11
 - Address : 서울특별시 중랑구 상봉동
 - Phone : 010-5048-3245
 - been Working Since 2015. 01.
-
+- 이직 준비중 : 2019. 06. 01 부터 출근 가능
 
 ---
-
 
 ## Development Skills
 
 ### Experienced Syntaxes
 
-- PHP : Legacy PHP(5.X), Modren PHP(7.X), Laravel
-- Java for Android
-- SQL for MySQL
-- ECMA Script 5 & jQuery
-- ECMA Script 6 & Node.js & React
-- HTML5 & CSS3 : Responsive Web, Web Standard, Cross Browsing, Bootstrap
+- PHP :
+  - Legacy PHP(5.X) : ★★★
+  - Modren PHP(7.X) : ★★★
+  - Laravel : ★★☆
+- ECMA Script :
+   - ES5(Javascript) : ★★★
+   - jQuery : ★★★
+   - ES6(Node.js) : ★★☆
+   - React : ★★☆
+- SQL for MySQL : ★★★
+- Java for Android : ★★☆
+- Front :
+  - HTML5 : ★★★
+  - Responsive Web : ★★★
+  - Web Standard : ★★★
+  - Cross Browsing : ★★★
+  - CSS3 : ★★★
+  - Bootstrap : ★★☆
+  - SCSS, SASS, LESS : ★★☆
 
 ### Experienced Systems
 
@@ -39,7 +51,6 @@ date: 2019-04-13 23:42:11
 ### Now Studying
 
 Laravel, React, AWS...
-
 
 ---
 
@@ -59,7 +70,6 @@ Laravel, React, AWS...
 - 재직기간 : 2015. 03 ~ 2015. 07
 - 직급(소속) : 주임(웹개발팀)
 - XE, Wordpress, Makeshop, Cafe24쇼핑몰 등을 이용해 반응형 웹사이트 30여개 제작
-
 
 ---
 
